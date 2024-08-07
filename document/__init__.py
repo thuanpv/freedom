@@ -62,15 +62,19 @@ class Document:
     # For dumb fuzz
     ############################################
     def generate_nodes(self):
+        print("document_init.py: Generating nodes")
         self.dom_tree.generate_nodes(self.dom_context)
 
     def generate_attributes(self):
+        print("document_init.py: Generating attributes")
         self.dom_tree.generate_attributes(self.dom_context)
 
     def generate_css_rules(self):
+        print("document_init.py: Generating css rules")
         self.css.generate_css_rules(self.dom_context)
 
     def generate_js_functions(self):
+        print("document_init.py: Generating js functions")
         self.main.generate_additional_elements()
         self.main.generate_apis()
         for eh in self.event_handlers:

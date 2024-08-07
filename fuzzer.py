@@ -17,9 +17,13 @@ class Fuzzer:
 
     def generate_one(self):
         document = Document(Random.range(TreeConfig.min_element_count, TreeConfig.max_element_count))
+        print("fuzzer.py: Generating nodes")
         document.generate_nodes()
+        print("fuzzer.py: Generating attributes")
         document.generate_attributes()
+        print("fuzzer.py: Generating rules")
         document.generate_css_rules()
+        print("fuzzer.py: Generating js functions")
         document.generate_js_functions()
         return document
 

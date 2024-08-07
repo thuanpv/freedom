@@ -94,6 +94,7 @@ class Element(Object):
     # For dumb fuzz
     ################################################
     def generate_attributes(self, context):
+        print("object_init.py generating attributes for " + str(self.name))
         avail_attr_count = get_attribute_count(self.name)
         if avail_attr_count >= 20:
             total_count = TreeConfig.max_attribute_count

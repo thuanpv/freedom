@@ -51,22 +51,28 @@ class DOMTree:
     # For dumb fuzz
     ################################################
     def generate_html_elements(self, context, count):
+        print("document_dom_tree.py generate html elements")
         for _ in range(count):
             element = self.insert_root_element(context)
             element.generate_text()
+            print("--Added a new element: " + str(element))
 
     def generate_svg_elements(self, context, count):
+        print("document_dom_tree.py generate svg elements")
         self.add_root_svg_element(context)
         for _ in range(count):
             child = self.root_svg.insert_child()
             if child is not None:
                 self.init_element(context, child)
                 child.generate_text()
+            print("--Added a new svg element: " + str(child))
 
     def generate_nodes(self, context):
         if Random.bool():
+            print("document_dom_tree.py Random - generate nodes")
             self.generate_html_elements(context, TreeConfig.root_element_count)
         else:
+            print("document_dom_tree.py generate both html and svg nodes")
             self.generate_html_elements(context, TreeConfig.root_element_count)
             self.generate_svg_elements(context, TreeConfig.root_element_count)
         # else:
@@ -78,7 +84,9 @@ class DOMTree:
                 element.generate_text()
 
     def generate_attributes(self, context):
+        print("document_dom_tree.py generate attributes")
         for element in self.elements:
+            print("--For: " + str(element))
             element.generate_attributes(context)
 
     ################################################

@@ -8,28 +8,28 @@ class TreeConfig:
         "global": 2,
         "aria": 1
     }
-    max_attribute_count = 10
-    root_element_count = 10
-    max_element_count = 80
-    min_element_count = 40
-    avg_element_count = 60
+    max_attribute_count = 5
+    root_element_count = 5
+    max_element_count = 10
+    min_element_count = 6
+    avg_element_count = 8
     max_depth = 3
 
 
 class JSConfig:
     callback_count = 5
-    max_api_count = 1000
+    max_api_count = 10
     additional_html_var_count = 5
 
 
 class CSSConfig:
-    use_css_var = 10
-    max_css_count = 50
+    use_css_var = 5
+    max_css_count = 20
     max_css_selector_count = 3
-    max_css_decl_count = 20
-    max_css_keyframe_count = 5
-    max_css_keyframe_decl_count = 5
-    max_css_internal_decl_count = 5
+    max_css_decl_count = 10
+    max_css_keyframe_count = 2
+    max_css_keyframe_decl_count = 2
+    max_css_internal_decl_count = 2
 
 
 token_limit = {

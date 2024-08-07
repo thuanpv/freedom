@@ -32,7 +32,9 @@ class Function(Object):
 
     def generate_additional_elements(self):
         for _ in range(JSConfig.additional_html_var_count):
-            self.apis.append(create_interesting_html_element(self.context))
+            ne = create_interesting_html_element(self.context)
+            print("Object_function.py add element " + str(ne) + " into function " + str(self.name))
+            self.apis.append(ne)
             self.context.line += 1
 
     def generate_api(self):
@@ -69,6 +71,7 @@ class Function(Object):
             return False
         self.context.line = len(self.apis)
         api = self.generate_api()
+        print("Object_function.py appends API " + str(api) + " into " + str(self.name)) 
         self.apis.append(api)
         return True
 

@@ -53,6 +53,7 @@ def get_api_count(name):
 
 def add_api(t):
     name = t.this_class.name
+    #print("js_init.py adding an api " + str(t) + " for " + name)
     if name not in apis:
         apis[name] = []
     apis[name].append(t)

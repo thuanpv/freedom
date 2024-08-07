@@ -19,7 +19,7 @@ This mode simply generates a number of random HTML documents and save them to a 
 
 Example:
 ```
-python main.py -i 1 -m generate -n 10 -o output
+python3 main.py -i 1 -m generate -n 1 -o output
 ```
 
 ## Security bugs
